@@ -9,7 +9,20 @@ const playerPoints = Math.ceil(Math.random() * 6);
 const ComputerPoints = Math.ceil(Math.random() * 6);
 
 console.log(playerPoints, ComputerPoints);
+
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
     // Se il punteggio giocatore è maggiore del punteggio computer: "HAI VINTO!"
+    if (playerPoints > ComputerPoints) {
+        
+        alert("HAI VINTO!");
     // Se il punteggio giocatore è uguale al punteggio computer:"PARI"
+    } else if (playerPoints === ComputerPoints) {
+        
+        alert("PAREGGIO");
     // Altrimenti: "HA VINTO IL COMPUTER!"
+    } else {
+        
+        alert("HAI PERSO");
+
+    }
+    
