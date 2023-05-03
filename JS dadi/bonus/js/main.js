@@ -17,11 +17,11 @@ playButton.addEventListener("click",
 
         // Output punteggio giocatore
         const playerOutput = document.getElementById("playerOutput");
-        playerOutput.innerHTML = playerPoints;
+        playerOutput.append (playerPoints);
 
         // Output punteggio computer
         const computerOutput = document.getElementById("computerOutput");
-        computerOutput.innerHTML = computerPoints;
+        computerOutput.append (computerPoints);
 
         let resultValue;
         // Stabilire il vincitore, in base al punteggio più alto.
@@ -40,7 +40,7 @@ playButton.addEventListener("click",
         }
 
         const resultOutput = document.getElementById("resultOutput");
-        resultOutput.innerHTML = resultValue;
+        resultOutput.append(resultValue);
     }
 
 );
