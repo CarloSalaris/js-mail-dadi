@@ -28,14 +28,17 @@
         
         //Se il valore di userMail corrisponde a un valore contenuto nell'array: accesso consentito
         if (userMail == mailArray[i]) {
-            registered === true
-            alert("Accesso consentito");
-            console.log("Accesso consentito");
-        }      
+            registered = true;   
+        }
     }
     
-    //Se non corrisponde a nessun valore: accesso negato
-    if (registered === false) {
+    //Output risultato
+    if (registered === true) {
+        alert("Accesso consentito");
+        console.log("Accesso consentito");
+    } else {
         alert("Accesso negato");
         console.log("Accesso negato");
     }
+
+    console.log(registered);
