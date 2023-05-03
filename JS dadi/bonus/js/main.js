@@ -7,29 +7,40 @@ const playButton = document.getElementById("play");
 playButton.addEventListener("click",
 
     function () {
-        // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-    // creare punteggio giocatore (playerPoints)
-    const playerPoints = Math.ceil(Math.random() * 6);
-    // creare punteggio computer (ComputerPoints)
-const ComputerPoints = Math.ceil(Math.random() * 6);
+        // Numero random da 1 a 6
+        // creare punteggio giocatore (playerPoints)
+        const playerPoints = Math.ceil(Math.random() * 6);
+        // creare punteggio computer (ComputerPoints)
+        const computerPoints = Math.ceil(Math.random() * 6);
 
-console.log(playerPoints, ComputerPoints);
+        console.log(playerPoints, computerPoints);
 
-// Stabilire il vincitore, in base a chi fa il punteggio più alto.
-    // Se il punteggio giocatore è maggiore del punteggio computer: "HAI VINTO!"
-    if (playerPoints > ComputerPoints) {
-        
-        alert("HAI VINTO!");
-    // Se il punteggio giocatore è uguale al punteggio computer:"PARI"
-    } else if (playerPoints === ComputerPoints) {
-        
-        alert("PAREGGIO");
-    // Altrimenti: "HA VINTO IL COMPUTER!"
-    } else {
-        
-        alert("HAI PERSO");
+        // Output punteggio giocatore
+        const playerOutput = document.getElementById("playerOutput");
+        playerOutput.innerHTML = playerPoints;
 
-    }
+        // Output punteggio computer
+        const computerOutput = document.getElementById("computerOutput");
+        computerOutput.innerHTML = computerPoints;
+
+        let resultValue;
+        // Stabilire il vincitore, in base al punteggio più alto.
+        // Se il punteggio giocatore è maggiore del punteggio computer: "HAI VINTO!"
+        if (playerPoints > computerPoints) {
+            resultValue = "HAI VINTO!";
+            console.log("HAI VINTO!");
+        // Se il punteggio giocatore è uguale al punteggio computer:"PARI"
+        } else if (playerPoints === computerPoints) {
+            resultValue = "PAREGGIO";
+            console.log("PAREGGIO");
+        // Altrimenti: "HA VINTO IL COMPUTER!"
+        } else {
+            resultValue = "HAI PERSO";
+            console.log("HAI PERSO");
+        }
+
+        const resultOutput = document.getElementById("resultOutput");
+        resultOutput.innerHTML = resultValue;
     }
 
 );
