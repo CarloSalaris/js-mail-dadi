@@ -14,13 +14,15 @@ const mailArray = ["shannon08@eichmann.com",
     "schaden.mario@pagac.com",
     "brody.doyle@yahoo.com",
     "keebler.kathleen@jakubowski.com",];
+
 const inputConfirm = document.getElementById("inputConfirm");
 
-let registered = false;
 
 inputConfirm.addEventListener("click", 
 
     function() {
+
+        let registered = false;
         //Chiedi all’utente la sua email
         const userMail = document.getElementById("userMail").value;
 
@@ -35,7 +37,7 @@ inputConfirm.addEventListener("click",
         }
     
         //Output risultato
-        if (registered === true) {
+        if (registered == true) {
             alert("Accesso consentito");
             console.log("Accesso consentito");
         } else {
